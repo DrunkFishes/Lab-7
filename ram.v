@@ -21,15 +21,15 @@
 module ram(
     input clk,
     input we,
-    input [7:0] addr,
+    input [15:0] addr,
     input [15:0] din,
     output [15:0] dout
     );
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-ram256x16 dut (
+ram_256x16 dut(
   .clka(clk), // input clka
   .wea(we), // input [0 : 0] wea
-  .addra(addr), // input [7 : 0] addra
+  .addra(addr), // input [15 : 0] addra
   .dina(din), // input [15 : 0] dina
   .douta(dout) // output [15 : 0] douta
 );

@@ -19,9 +19,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module CPU_EU(clk, reset, Din, we, addr_sel, sel, ld_pc, count_pc, ld_ir, 
-				  count_ld, C, N, Z, Addr_out, Dout);
+              C, N, Z, Addr_out, Dout);
 
-	input clk, rseet, we, sel, addr_sel, ld_pc, count_pc, ld_ir, count_ir;
+	input clk, reset, we, sel, addr_sel, ld_pc, count_pc, ld_ir;
 	input [15:0] Din; 
 	
 	output wire   C,N,Z;
@@ -37,8 +37,8 @@ module CPU_EU(clk, reset, Din, we, addr_sel, sel, ld_pc, count_pc, ld_ir,
 	
 	
 					// (clk, reset, ld,    count,    Din,  Dout)
-	Reg_16 PC      (clk, reset, ld_pc, count_pc, Dout, pc_Q);
-	Reg_16 IR      (clk, reset, ld_ir, count_pc, Din,  ir_Q);
+	Reg_16   PC  (clk, reset, ld_pc, count_pc, Dout, pc_Q);
+	Reg_16   IR  (clk, reset, ld_ir, count_pc, Din,  ir_Q);
 	
 	
 	assign Addr_out = (addr_sel)? Reg_out: pc_Q;
