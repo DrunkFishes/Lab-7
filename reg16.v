@@ -15,7 +15,7 @@ module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
 	output [15:0] DA, DB;
 	reg    [15:0] Dout;
 	
-    // behavioral section for writing to the regisdter
+    // behavioral section for writing to the register
     always@ (posedge clk or posedge reset)
         if (reset)
             Dout <= 16'b0;
@@ -25,7 +25,7 @@ module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
             else
 		        Dout <= Dout;
 	
-    // conditional continout assignments for reading th3e register
+    // conditional continout assignments for reading the register
     assign DA = oeA ? Dout : 16'hz;
     assign DB = oeB ? Dout : 16'hz;
 
