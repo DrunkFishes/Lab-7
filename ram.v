@@ -1,23 +1,14 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    17:13:12 11/20/2017 
-// Design Name: 
-// Module Name:    ram 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+ /*******************************************************************************
+ * Author:   Steven Phan
+ * Email:	 1anh21@gmail.com
+ * Filename: CPU_EU.v
+ * Date:     October 23, 2017
+ * Version:  1.4
+ * Purpose:  Module is the memory source that is 256 wide and 16 bits deep.
+ *					
+ * Notes:	 
+ *******************************************************************************/
 module ram(
     input clk,
     input we,
