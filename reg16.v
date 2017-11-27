@@ -1,11 +1,14 @@
 `timescale 1ns / 1ps
  /*******************************************************************************
  * Author:   Steven Phan
- * Email:	 1anh21@gmail.com
+ * Email:    1anh21@gmail.com
  * Filename: reg16.v
  * Date:     October 23, 2017
  * Version:  1.0
- * Purpose:  
+ * Purpose:  Module takes in a synchronous load for the 16-bit Din. When the 
+	     asynchronous reset is high, 16-bit Dout outputs 0. DA and DB are
+	     16-bit and tri-state outputs. The outputs are governed by oeA and
+	     oeB
  *					
  * Notes:	 
  *******************************************************************************/
