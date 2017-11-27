@@ -38,11 +38,11 @@ module alu16(R, S, Alu_op, Y, N, Z, C);
 							C = S[0];
 							Y = S >> 1;
 						end
-			4'b0111:begin						//left shift S (logic)
-							C = S[0];
+			4'b0111:    begin				    //left shift S (logic)
+							C = S[15];
 							Y = S << 1;
 						end
-			4'b1000:	{C,Y} = {1'b0,R & S};   // logic and
+			4'b1000:	{C,Y} = {1'b0,R & S};   //logic and
 			4'b1001:	{C,Y} = {1'b0,R | S};   //logic or
 			4'b1010:	{C,Y} = {1'b0,R ^ S};   //logic xor
 			4'b1011:	{C,Y} = {1'b0,~S};	    //logic not S (1's comp)
