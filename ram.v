@@ -2,8 +2,8 @@
  /*******************************************************************************
  * Author:   Steven Phan
  * Email:	 1anh21@gmail.com
- * Filename: CPU_EU.v
- * Date:     October 23, 2017
+ * Filename: ram.v
+ * Date:     November 26, 2017
  * Version:  1.4
  * Purpose:  Module is the memory source that is 256 wide and 16 bits deep.
  *					

@@ -2,17 +2,17 @@
  /*******************************************************************************
  * Author:   Benjamin Adinata
  *           Steven Phan
- * Email:    benjaminadinata@yahoo.com
+ * Email:	 benjaminadinata@yahoo.com
  *           1anh21@gmail.com
  * Filename: reg_PC.v
  * Date:     November 26, 2017
  * Version:  1.0
  * Purpose:  Module instantiates integer datapath module. Takes a 16-bit input
-	     and two 16-bit outputs for the Registers and ALU. PC increments 
-	     every ALU. Multiplexer takes 16-bit but outputs 8-bits. IR takes 
-	     takes 16-bits.
+ *	         and two 16-bit outputs for the Registers and ALU. PC increments 
+ *	         every ALU. Multiplexer takes 16-bit but outputs 8-bits. IR takes 
+ *	        takes 16-bits.
  *					
- * Notes:	 
+ * Notes:
  *******************************************************************************/
 module CPU_EU(clk, reset, Din, we, addr_sel, sel, ld_pc, count_pc, ld_ir,
               C, N, Z, Addr_out, Dout);
